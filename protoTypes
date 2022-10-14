@@ -1,0 +1,16 @@
+//prototype: khuôn đúc ra bánh ( object)
+function Mouse(color, weight){
+    this.type = 'mouse';
+    this.color = color;
+    this.weight = weight;
+}
+Mouse.prototype.sleep = function() {
+    console.log(this.color + 'Sleeping...');
+
+};
+var jerry = new Mouse('orange', 20);
+
+var mickey = new Mouse('white', 10);
+jerry.sleep();
+mickey.sleep(); // tiết kiệm bộ nhớ
+// best practice

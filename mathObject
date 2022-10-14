@@ -1,0 +1,25 @@
+// Math.PI
+// S hình tròn
+function discRound(r) {
+    return r*r*Math.PI;
+}
+var S = discRound(5);
+console.log(S)
+// Math.ceiling(number)// dùng để làm tròn só thập phân lên 9,5 --> 10, 9,3 --> 10
+//math.floor(number): làm tròn xuống 
+console.log(Math.ceil(9.2));
+
+console.log(Math.floor(9.2));
+//Math.round (number): 
+//Math.max(x1, x2,...)// của 2 số trở lên
+console.log(Math.max(10, 20, -1))
+//Math.min(x1, x2,...)
+console.log(Math.min(20, 20, -1))
+//Math.random()
+
+function tossCoin(){
+    var random = Math.random();
+    console.log(random);
+    return random > 0.5;
+}
+console.log('Mặt sấp:', tossCoin())

@@ -1,0 +1,67 @@
+// săp xếp các phần tử
+// array.sort(function(a, b){})
+// if sort function 
+// returns a -b value < 0
+// a will come before b
+// return a -b value > 0
+// a will come after b
+// return 0
+// a and b will stay un changed
+//giả sử a < b hay a > b thì return a - b đều cho kq là sắp xếp mảng theo thứ tự tăng dần
+//  (ascending order)
+//  tương tự b - a là thứ tự giảm dần.
+let numbers = [2, 9, 3, 4, 1];
+// [1, 2, 3, 4, 9]// ascending order
+let ascendingNumbers = numbers.soft(function(a, b){
+    // a=1, b =4
+return a -b;
+});
+console.log(ascendingNumbers);
+// descending
+var descendingNumbers = numbers.sort(function(a, b){
+    // assume: a =3, b=4
+    // expect: a comes after b
+    return b -a;
+});
+console.log(descendingNumbers);
+
+var employees = [
+    {name: 'Tí', age: 18},
+    {name: 'Tèo', age: 20},
+    {name: 'Maria', age: 19}
+];
+
+console.log(employees);
+let sortedEmployees = employees.sort(function(a, b){
+    // a = employee[1], b=employee[2]
+    // expect" a comes after b
+    return a.age - b.age;//>0
+});
+console.log(sortedEmployees);
+// 1. Define an array of products (name, price, stock)
+// 2. sort by price from more expensive to less expensice
+var products = [
+    {name:'bim bim', price: 5000, stock:20},
+    {name: 'sting', price:10000, stock:15},
+    {name:'nutri',price:12000, stock:20},
+    {name:'tra sua' , price:25000,stock:5}
+    ];
+    var descendingProducts = products.sort(function(a, b){
+        // a = 25000, b = 120000
+        return b.price - a.price;
+    });
+    console.log(descendingProducts);
+// 3. Sort by stock value from more expensive to less expensice
+var products = [
+    {name:'bim bim', price: 5000, stock:20},
+    {name: 'sting', price:10000, stock:15},
+    {name:'nutri',price:12000, stock:20},
+    {name:'tra sua' , price:25000,stock:5}
+    ];
+    
+
+var sortStock = products.sort(function(a,b){
+return  (b.stock * b.price)- (a.stock * a.price);
+
+});
+console.log(sortStock);

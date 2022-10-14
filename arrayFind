@@ -1,0 +1,11 @@
+// lọc các phần tử khi nào đúng thì thôi
+// arr.find(function(item) {
+//  //filter
+//  return x; // true or false   
+// });
+
+var numbers = [1, 2, 3, 4];
+numbers.find(function(number) {
+    console.log(number)
+    return number %2 === 0;
+});
